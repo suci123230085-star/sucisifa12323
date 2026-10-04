@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Modern Saya - Tema Pink Jambu</title>
+    <style>
+        /* === RESET & PENGATURAN DASAR === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #1a0f12; /* Latar belakang gelap hangat */
+            color: #fde8ed;            /* Warna teks lembut */
+            line-height: 1.6;
+        }
+
+        /* === HERO BANNER & HEADER === */
+        .hero {
+            background: linear-gradient(135deg, #ff6b8b 0%, #e04867 50%, #b82e4a 100%);
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 4px solid #ffa8ba;
+            box-shadow: 0 10px 30px rgba(224, 72, 103, 0.25);
+        }
+
+        .avatar {
+            font-size: 55px;
+            background: rgba(255, 255, 255, 0.2);
+            width: 95px;
+            height: 95px;
+            line-height: 95px;
+            border-radius: 50%;
+            margin: 0 auto 15px auto;
+            border: 3px solid #ffffff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+
+        .highlight {
+            color: #fff0f3;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: #ffe0e6;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        /* === NAVIGASI === */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 18px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .nav-btn:hover {
+            background: #ffffff;
+            color: #e04867;
+            transform: translateY(-2px);
+        }
+
+        /* === KONTEN UTAMA === */
+        .container {
+            max-width: 850px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: #28161c;
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 25px;
+            border: 1px solid #3d212b;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: #ff6b8b;
+            box-shadow: 0 12px 25px rgba(255, 107, 139, 0.15);
+        }
+
+        .card h2 {
+            color: #ff6b8b;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #3d212b;
+            padding-bottom: 8px;
+            font-size: 1.4rem;
+        }
+
+        /* === TIMELINE PENDIDIKAN === */
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .timeline-item {
+            border-left: 3px solid #ff6b8b;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -7px;
+            top: 5px;
+            width: 11px;
+            height: 11px;
+            background: #ffa8ba;
+            border-radius: 50%;
+        }
+
+        .timeline-item h3 {
+            color: #ffffff;
+            font-size: 1.1rem;
+        }
+
+        .institution {
+            color: #ffa8ba;
+            font-size: 0.95rem;
+        }
+
+        .date {
+            display: inline-block;
+            font-size: 0.8rem;
+            color: #d19ba7;
+            margin-top: 4px;
+        }
+
+        /* === GRID HOBI / KEAHLIAN === */
+        .skills-grid {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .skill-tag {
+            background: rgba(255, 107, 139, 0.12);
+            color: #ffa8ba;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 1px solid #ff6b8b;
+            transition: all 0.2s ease;
+        }
+
+        .skill-tag:hover {
+            background: #ff6b8b;
+            color: #1f0a12;
+            cursor: pointer;
+        }
+
+        /* === TOMBOL KONTAK === */
+        .contact-links {
+            margin-top: 20px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 10px 22px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #e04867;
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background: #ff6b8b;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #ffa8ba;
+            border: 1px solid #ffa8ba;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 168, 186, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* === FOOTER === */
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #9e7580;
+            font-size: 0.85rem;
+            border-top: 1px solid #3d212b;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO HEADER -->
+    <header class="hero">
+        <div class="hero-content">
+            <div class="avatar">👤</div>
+            <h1>Halo, Saya <span class="highlight">Suci Sifa Khairunnisa</span></h1>
+            <p class="subtitle">Web Developer & Creative Student</p>
+            <nav>
+                <a href="#tentang" class="nav-btn">Tentang</a>
+                <a href="#pendidikan" class="nav-btn">Pendidikan</a>
+                <a href="#hobi" class="nav-btn">Hobi</a>
+                <a href="#kontak" class="nav-btn">Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- KONTEN UTAMA -->
+    <main class="container">
+        <!-- TENTANG SAYA -->
+        <section id="tentang" class="card">
+            <h2>Tentang Saya</h2>
+            <p>Halo! Saya Suci Sifa Khairunnisa, seorang mahasiswa yang sedang dalam proses belajar untuk menjadi pengembang web yang lebih baik.</p>
+        </section>
+
+        <!-- RIWAYAT PENDIDIKAN -->
+        <section id="pendidikan" class="card">
+            <h2>Riwayat Pendidikan</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Perguruan Tinggi</h3>
+                    <p class="institution">Institut Teknologi Sumatera</p>
+                    <span class="date">2023 - Sekarang</span>
+                </div>
+                <div class="timeline-item">
+                    <h3>SMA</h3>
+                    <p class="institution">SMA Negeri 15 Bandar Lampung</p>
+                    <span class="date">2020 - 2023</span>
+                </div>
+                <div class="timeline-item">
+                    <h3>SMP</h3>
+                    <p class="institution">SMP Negeri 19 Bandar Lampung</p>
+                    <span class="date">2017 - 2020</span>
+                </div>
+                <div class="timeline-item">
+                    <h3>SD</h3>
+                    <p class="institution">SMP Negeri 1 Way Kandis</p>
+                    <span class="date">2012 - 2016</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOBI & MINAT -->
+        <section id="hobi" class="card">
+            <h2>Hobi & Minat</h2>
+            <div class="skills-grid">
+                <div class="skill-tag">Memasak</div>
+                <div class="skill-tag">Bernyanyi</div>
+                <div class="skill-tag">Dengerin Podcast</div>
+                <div class="skill-tag">Mendengarkan Musik</div>
+            </div>
+        </section>
+
+        <!-- KONTAK -->
+        <section id="kontak" class="card">
+            <h2>Hubungi Saya</h2>
+            <p>Tertarik untuk berkolaborasi atau sekadar bertegur sapa? Silakan hubungi saya melalui saluran di bawah ini:</p>
+            <div class="contact-links">
+                <a href="suci.123230085@student.itera.ac.id" class="btn btn-primary">✉ Kirim Email</a>
+                <a href="https://www.instagram.com/sucisifa_25?stkn=MTFidGtpdTBvdTc4Zw=="target="_blank" class="btn btn-secondary">🔗 Instagram
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Profil Pribadi. Hak Cipta Dilindungi.</p>
+    </footer>
+
+</body>
+</html>
